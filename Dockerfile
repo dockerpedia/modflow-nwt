@@ -11,8 +11,10 @@ RUN apt-get update \
 
 RUN pip install \
     numpy \
-    requests \
-    https://github.com/modflowpy/pymake/zipball/master
+    requests
+   
+#pymake needs numpy, we need an indepedent
+RUN pip install https://github.com/modflowpy/pymake/zipball/master
 
 RUN wget https://github.com/modflowpy/pymake/archive/master.zip \
     && unzip master.zip \ 
