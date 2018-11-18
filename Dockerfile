@@ -16,7 +16,7 @@ RUN pip install \
 
 RUN wget https://github.com/modflowpy/pymake/archive/master.zip \
     && unzip master.zip \ 
-    && cd pymake-master/examples 
-    && python make_mfnwt.py 
-    && cd temp 
+    && cd pymake-master/examples \
+    && python make_mfnwt.py  \
+    && cd temp \
     && mv mfnwt /usr/bin/
